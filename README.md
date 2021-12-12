@@ -10,12 +10,17 @@ Windows automatically creates the `WSL` network when a WSL2 environment is start
 
 - this needs to be done **before** starting any WSL2 (or Docker on WSL2) environments
 - if you need to do this afterwards, restart WSL2 environments by shutting them down with `wsl --shutdown`; they should work correctly after they're re-launched.
+- you may need to disable Docker auto-start: this needs to run first
 - the utility needs to be run in an **elevated** mode (administrator) in order to alter the network configuration
   - you'll get an `Access denied` error if you are not elevated
-  - for now, just run in an elevated console
-  - could potentially be scheduled as a boot task or installed as a service (TBA)
+  - run in an elevated console
+  - or schedule as a task (noted below)
 
 Basic command line help can be obtained with `wsl-subnet --help`
+
+Installing this as a task is possible via the Task Scheduler:
+- Use `At system startup` as the trigger
+- Run under the `SYSTEM` account
 
 ## Build
 
