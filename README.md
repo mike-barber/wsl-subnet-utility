@@ -22,9 +22,14 @@ Installing this as a task is possible via the Task Scheduler:
 - Use `At system startup` as the trigger
 - Run under the `SYSTEM` account
 
+This can done in an elevated console. Adjust the following example to point to your file location, of course.
+```batch
+schtasks /create /tn "WSL Subnet Configure" /tr c:\tools\wsl-subnet.exe /sc onstart /ru System
+```
+
 ## Build
 
-```
+```batch
 cd src
 go build .
 ```
