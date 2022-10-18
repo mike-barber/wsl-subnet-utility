@@ -43,14 +43,6 @@ func CreateWsl(ipHost string, ipSubnet string) {
 		Name: "WSL",
 		Type: "ICS",
 		Id:   "B95D0C5E-57D4-412B-B571-18A81A16E005",
-		MacPool: hcn.MacPool{
-			Ranges: []hcn.MacRange{
-				{
-					StartMacAddress: "00-15-5D-EC-B0-00",
-					EndMacAddress:   "00-15-5D-EC-BF-FF",
-				},
-			},
-		},
 		Dns: hcn.Dns{
 			ServerList: []string{
 				ipHost,
